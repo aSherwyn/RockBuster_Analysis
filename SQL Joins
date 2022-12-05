@@ -1,0 +1,17 @@
+/*
+Using joins to connect customer data to country names.
+Returns the top 10 most populated (by Rockbuster customers) countries by grouping by country, ordering by count
+in descending order, and limiting the return to the first 10 results.
+Note: Inner joins used as this query is only interested in complete records
+*/
+SELECT
+	D.country,
+	COUNT(*)
+FROM
+	customer A
+INNER JOIN address B ON A.address_id = B.address_id
+INNER JOIN city C ON B.city_id = C.city_id
+INNER JOIN country D ON C.country_id = D.country_id
+GROUP BY (D.country)
+ORDER BY (COUNT(D.country)) DESC
+LIMIT 10;
