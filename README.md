@@ -15,8 +15,14 @@ The data set, provided by CareerFoundry, contains:
 Original data:</br>
 http://www.postgresqltutorial.com/wp-content/uploads/2019/05/dvdrental.zip
 </br>
-</br>Tableau visualizations:
+</br>
+Tableau visualizations:
 </br>
 https://public.tableau.com/views/RockbusterCustVal/Sheet1?:language=en-US&:display_count=n&:origin=viz_share_link
 </br>
 https://public.tableau.com/views/RockbusterSpread/Sheet1?:language=en-US&:display_count=n&:origin=viz_share_link
+</br>
+</br>
+Final report:
+</br>
+https://github.com/aSherwyn/RockBuster_Analysis/blob/798dbc6c9fd4e100835ab378da0c25a194172f79/RockbusterFinalReport.pdf
