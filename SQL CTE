@@ -1,0 +1,37 @@
+/*
+CTE finds the "top 5 customers" by grouping by customer_id, summing total amount paid per customer,
+ordering by largest sum in descending order, and returning the first five customers.
+Note: INNER joins used as this query is only interested in complete records.
+*/
+WITH top_5 (customer_id, first_name, last_name, country, city, total_amount_paid) AS
+	(SELECT
+		S1.customer_id,
+		S1.first_name,
+		S1.last_name,
+		S4.country,
+		S3.city,
+		SUM(S5.amount) AS total_amount_paid
+	FROM
+		customer S1
+	INNER JOIN address S2 ON S1.address_id = S2.address_id
+	INNER JOIN city S3 ON S2.city_id = S3.city_id
+	INNER JOIN country S4 ON S3.country_id = S4.country_id
+	INNER JOIN payment S5 ON S1.customer_id = S5.customer_id
+ --Limits query to the highest earning countries (established in a previous query)
+	WHERE S4.country IN ('India', 'China', 'United States', 'Japan', 'Mexico', 'Brazil', 'Russian Federation', 'Philippines', 'Turkey', 'Indonesia')
+ --Limits query to the highest earning cities in the highest earning countries (established in a previous query)
+	AND S3.city IN ('Aurora', 'Atlixco', 'Xintai', 'Adoni', 'Dhule (Dhulia)', 'Kurashiki', 'Pingxiang', 'Sivas', 'Celaya', 'So Leopoldo')
+	GROUP BY (S1.customer_id,
+		S1.first_name,
+		S1.last_name,
+		S4.country,
+		S3.city)
+	ORDER BY (SUM(S5.amount)) DESC
+	LIMIT 5)
+
+/*
+Finds the average amount spent by the "top 5 customers"
+*/
+SELECT 
+	AVG(total_amount_paid) AS average
+FROM top_5;
