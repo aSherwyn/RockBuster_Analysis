@@ -12,6 +12,16 @@ The data set, provided by CareerFoundry, contains:
 </br>599 customers
 
 ## Links
+Final report:
+</br>
+https://github.com/aSherwyn/RockBuster_Analysis/blob/798dbc6c9fd4e100835ab378da0c25a194172f79/RockbusterFinalReport.pdf
+</br>
+</br>
+Data dictionary:
+</br>
+https://github.com/aSherwyn/RockBuster_Analysis/blob/f41e92307d15b02dc43ca9c3ad8b3eca6506169e/Data%20Dictionary%20-%20Rockbuster.pdf
+</br>
+</br>
 Original data:</br>
 http://www.postgresqltutorial.com/wp-content/uploads/2019/05/dvdrental.zip
 </br>
@@ -21,8 +31,3 @@ Tableau visualizations:
 https://public.tableau.com/views/RockbusterCustVal/Sheet1?:language=en-US&:display_count=n&:origin=viz_share_link
 </br>
 https://public.tableau.com/views/RockbusterSpread/Sheet1?:language=en-US&:display_count=n&:origin=viz_share_link
-</br>
-</br>
-Final report:
-</br>
-https://github.com/aSherwyn/RockBuster_Analysis/blob/798dbc6c9fd4e100835ab378da0c25a194172f79/RockbusterFinalReport.pdf
